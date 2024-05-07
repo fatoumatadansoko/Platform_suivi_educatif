@@ -10942,8 +10942,14 @@ p {
     margin-right: 0;
   }
 }
+/* Ajustez la position de la barre de navigation pour qu'elle soit au-dessus de l'image de fond */
+.navbar {
+  z-index: 1000; /* Assurez-vous que la barre de navigation est au-dessus de l'image */
+}
+
+/* Ajustez la position de l'en-tête pour qu'il démarre après la barre de navigation */
 header.masthead {
-  padding-top: 10.5rem;
+  padding-top: calc(10.5rem + 200px); /* La hauteur de la barre de navigation est d'environ 72px */
   padding-bottom: 6rem;
   text-align: center;
   color: #fff;
@@ -10953,20 +10959,9 @@ header.masthead {
   background-position: center center;
   background-size: contain;
 }
-header.masthead .masthead-subheading {
-  font-size: 1.5rem;
-  font-style: italic;
-  line-height: 1.5rem;
-  margin-bottom: 25px;
-  font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}
-header.masthead .masthead-heading {
-  font-size: 3.25rem;
-  font-weight: 700;
-  line-height: 3.25rem;
-  margin-bottom: 2rem;
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}
+
+
+
 
 @media (min-width: 768px) {
   header.masthead {
